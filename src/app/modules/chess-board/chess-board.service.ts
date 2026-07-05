@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { FENConverter } from 'src/app/chess-logic/FENConverter';
 
 @Injectable({
@@ -7,4 +7,5 @@ import { FENConverter } from 'src/app/chess-logic/FENConverter';
 })
 export class ChessBoardService {
   public chessBoardState$ = new BehaviorSubject<string>(FENConverter.initalPosition);
+  public reset$ = new Subject<void>();
 }

@@ -3,6 +3,9 @@
     overflow-y: scroll;
     display: flex;
     flex-direction: column-reverse;
+    background: rgba(14, 25, 38, 0.5);
+    border-radius: 6px;
+    padding: 4px 0;
 }
 
 .move-list::-webkit-scrollbar {
@@ -17,23 +20,28 @@
 .row {
     width: 250px;
     display: flex;
-    color: white
+    color: #e8d5c4;
+    font-family: var(--font-main, 'Nunito', sans-serif);
 }
 
 .move-number {
     width: 50px;
+    color: #a89585;
 }
 
 .current-move {
-    background-color: rgb(0, 143, 168);
+    background-color: rgba(196, 47, 64, 0.5);
+    border-radius: 3px;
 }
 
 .move {
     cursor: pointer;
     width: 100px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background-color 0.15s ease;
 }
 
 .move:hover {
-    background-color: rgb(0, 143, 168);
-    opacity: 0.7
+    background-color: rgba(196, 47, 64, 0.35);
 }

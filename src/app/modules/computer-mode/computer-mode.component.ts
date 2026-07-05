@@ -22,7 +22,8 @@ export class ComputerModeComponent extends ChessBoardComponent implements OnInit
 
     const computerConfiSubscription$: Subscription = this.stockfishService.computerConfiguration$.subscribe({
       next: (computerConfiguration) => {
-        if (computerConfiguration.color === Color.White) this.flipBoard();
+        this.flipMode = computerConfiguration.color === Color.White;
+        this.resetBoard();
       }
     });
 

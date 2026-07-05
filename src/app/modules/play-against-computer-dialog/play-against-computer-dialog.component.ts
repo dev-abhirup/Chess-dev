@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from "@angular/material/dialog";
 import { StockfishService } from '../computer-mode/stockfish.service';
+import { ChessBoardService } from '../chess-board/chess-board.service';
 import { Color } from 'src/app/chess-logic/models';
 import { Router } from '@angular/router';
 
@@ -19,6 +20,7 @@ export class PlayAgainstComputerDialogComponent {
 
   constructor(
     private stockfishService: StockfishService,
+    private chessBoardService: ChessBoardService,
     private dialog: MatDialog,
     private router: Router
   ) { }
@@ -33,6 +35,7 @@ export class PlayAgainstComputerDialogComponent {
       color: color === "w" ? Color.Black : Color.White,
       level: this.stockfishLevel
     });
+    this.chessBoardService.reset$.next();
     this.router.navigate(["against-computer"]);
   }
 

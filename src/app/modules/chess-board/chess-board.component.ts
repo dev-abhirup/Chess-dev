@@ -67,7 +67,23 @@ export class ChessBoardComponent implements OnInit, OnDestroy {
       )
       .subscribe();
 
+    const resetSubscription$: Subscription = this.chessBoardService.reset$.subscribe({
+      next: () => {
+        this.resetBoard();
+      }
+    });
+
     this.subscriptions$.add(keyEventSubscription$);
+    this.subscriptions$.add(resetSubscription$);
+  }
+
+  public resetBoard(): void {
+    this.chessBoard = new ChessBoard();
+    this.chessBoardView = this.chessBoard.chessBoardView;
+    this.markLastMoveAndCheckState(this.chessBoard.lastMove, this.chessBoard.checkState);
+    this.unmarkingPreviouslySlectedAndSafeSquares();
+    this.gameHistoryPointer = 0;
+    this.chessBoardService.chessBoardState$.next(this.chessBoard.boardAsFEN);
   }
 
   public ngOnDestroy(): void {

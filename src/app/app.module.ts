@@ -9,6 +9,7 @@ import { NavMenuComponent } from './modules/nav-menu/nav-menu.component';
 import { AppRoutingModule } from './routes/app-routing.module';
 import { PlayAgainstComputerDialogComponent } from './modules/play-against-computer-dialog/play-against-computer-dialog.component';
 import { MoveListComponent } from './modules/move-list/move-list.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MoveListComponent } from './modules/move-list/move-list.component';
     AppRoutingModule,
     NavMenuComponent,
     PlayAgainstComputerDialogComponent,
-    MoveListComponent
+    MoveListComponent,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

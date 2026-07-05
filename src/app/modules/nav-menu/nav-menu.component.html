@@ -1,5 +1,5 @@
 <mat-toolbar>
-    <button mat-button routerLink="/against-friend">
+    <button mat-button routerLink="/against-friend" (click)="playAgainstFriend()">
         Play against friend
     </button>
 
@@ -9,4 +9,6 @@
 
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<div class="main-content">
+    <router-outlet></router-outlet>
+</div>
