@@ -34,7 +34,7 @@
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
     background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
     background-attachment: fixed;
 }
@@ -45,6 +45,9 @@ body {
     color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Override Angular Material toolbar */
@@ -126,4 +129,44 @@ body {
         padding: 10px;
         min-height: calc(100vh - 56px);
     }
+}
+
+/* Footer styling */
+.creator-footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px 28px;
+    font-family: var(--font-main, 'Nunito', sans-serif);
+    border-top: 1px solid rgba(196, 47, 64, 0.12);
+    background: transparent;
+    margin-top: auto;
+}
+
+.footer-line-1 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+}
+
+.portfolio-link {
+    color: var(--accent-red-light, #d4485a);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px dashed rgba(212, 72, 90, 0.4);
+    transition: all 0.25s ease;
+}
+
+.portfolio-link:hover {
+    color: #e8d5c4;
+    border-bottom-color: #e8d5c4;
+    text-shadow: 0 0 10px rgba(212, 72, 90, 0.4);
+}
+
+.footer-line-2 {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+    opacity: 0.8;
 }
