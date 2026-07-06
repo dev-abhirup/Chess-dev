@@ -1,6 +1,12 @@
-# Premium Chess
+# Chess-Dev / Chess-Dev-Abhirup
 
-A beautiful, modern, and highly responsive chess application built with Angular and Angular Material, featuring an engine integration with the Stockfish REST API.
+A premium, modern, and highly responsive chess application built with Angular and Angular Material, featuring real-time engine integrations powered by the Stockfish REST API.
+
+**Live Deployment URL**: [chess-dev-abhirup.vercel.app](https://chess-dev-abhirup.vercel.app)
+
+**GitHub Repository**: [github.com/dev-abhirup/Chess-dev](https://github.com/dev-abhirup/Chess-dev)
+
+---
 
 ## Features
 
@@ -33,7 +39,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed.
 
 1. Clone the repository:
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/dev-abhirup/Chess-dev.git
    cd Chess
    ```
 
@@ -49,15 +55,17 @@ Ensure you have [Node.js](https://nodejs.org/) installed.
 
 4. Open your browser and navigate to `http://localhost:4200/`.
 
-## Deployment
+## Deployment Steps
 
-This project is configured for easy deployment on **Vercel** or **GitHub Pages**.
+This project is configured for seamless deployment on **Vercel**.
 
 ### Deploying to Vercel
 
-1. Install the Vercel CLI or import the repository directly on the [Vercel Dashboard](https://vercel.com).
-2. Configure the build settings:
+1. Log in to your [Vercel Dashboard](https://vercel.com).
+2. Click **Add New** -> **Project**.
+3. Import your GitHub repository: `dev-abhirup/Chess-dev`.
+4. Configure the build settings:
    - **Framework Preset**: Angular
    - **Build Command**: `npm run build`
-   - **Output Directory**: `dist/chess-game` or `dist/` (depending on the build path in `angular.json`)
-3. Click deploy!
+   - **Output Directory**: `docs` (Make sure to override this to `docs` in Vercel settings since `angular.json` compiles to the `docs` folder)
+5. Click **Deploy**.
